@@ -1,0 +1,19 @@
+PASO 1: Instalar paquete para el broker mqtt
+
+sudo apt-get install mosquitto
+
+PASO 2: Habilitar firewall para admitir conexiones (tanto entrantes como salientes)
+
+sudo apt-get install ufw
+sudo ufw enable
+sudo ufw allow 1883
+sudo ufw status
+
+PASO 3: Configurar archivo de configuración mosquitto
+
+cd /etc/mosquitto
+sudo nano mosquito.conf
+
+PASO 4: Verificar el funcionamiento del broker
+
+sudo systemctl status mosquitto
